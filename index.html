@@ -8,6 +8,37 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   <style>
+    :root { 
+   .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .social-icons a {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a.youtube { background: #FF0000; }
+    .social-icons a.telegram { background: #0088cc; }
+    .social-icons a.whatsapp { background: #0cfa10; }
+    .social-icons a.github { background: #333; }
+
+    .social-icons a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
         body { font-family: 'DM Sans', sans-serif; }
         .glow-border { border: 1px solid rgba(56, 189, 248, 0.2); }
         .hero-glow { background: radial-gradient(ellipse at center top, rgba(56, 189, 248, 0.08) 0%, transparent 60%); }
@@ -36,7 +67,7 @@
     </div>
     <p data-template-id="hero-desc" class="canva-text max-w-lg mx-auto text-sm mb-8" style="color: rgb(148, 163, 184); font-weight: 400; font-style: normal; font-size: 16px;">A WhatsApp bot that automates your chats, statuses, and groups — pair your number and it's online in seconds, no server of your own required.</p>
       <!-- Bot Connection-->
-      <a href="./pair.html" target="_blank"><button data-template-id="connect-btn" class="canva-button px-6 py-2.5 rounded-lg font-medium text-sm" style="background: rgb(14, 165, 233); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">Connect Bot</button>
+      <a href="https://legacy-md-bot.onrender.com" target="_blank"><button data-template-id="connect-btn" class="canva-button px-6 py-2.5 rounded-lg font-medium text-sm" style="background: rgb(14, 165, 233); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">Connect Bot</button>
         </a>
    </div> 
     <div class="flex justify-center gap-6 mt-8 text-xs text-gray-400">
