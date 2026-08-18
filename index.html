@@ -63,6 +63,93 @@
       transform: scale(1.1);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
+
+    /* Top Navigation */
+    .topbar {
+      display: flex;
+      justify-content: flex-start; /* LEFT SIDE */
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    /* Hamburger Icon */
+    .menu-icon {
+      width: 30px;
+      cursor: pointer;
+    }
+
+    .menu-icon div {
+      height: 4px;
+      background: #111;
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* Dropdown Menu */
+    .nav-menu {
+      display: none;
+      text-align: left;
+      margin-bottom: 30px;
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 12px;
+      width: 220px;
+    }
+
+    .nav-menu a {
+      display: block;
+      margin: 12px 0;
+      color: #5a4fcf;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .nav-menu a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Content */
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .projects-list {
+      text-align: center;
+      list-style-position: inside;
+      padding: 0;
+      margin-top: 30px;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 80px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .footer a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #00d4ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 
   <script src="/_sdk/0179d719c431a79e.data_sdk.js" type="text/javascript"
@@ -89,6 +176,25 @@
         style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;"
       >LEGACY MD</span>
     </div>
+
+  <!-- Top Left Hamburger -->
+  <div class="topbar">
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- Hidden Navigation -->
+  <div class="nav-menu" id="navMenu">
+    <a href="/#home">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="minecraft/minecraft-servers.html">Minecraft Servers</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="updates.html">Updates</a>
+    <a href="tos.html">Terms of Service</a>
+  </div>
   </header>
 
   <main>
@@ -345,6 +451,16 @@
     defer></script>
 
   <script>
+
+    function toggleMenu() {
+      const menu = document.getElementById("navMenu");
+
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
+    }
     window.addEventListener('DOMContentLoaded', function () {
       if (window.lucide) {
         window.lucide.createIcons();
